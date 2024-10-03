@@ -1,66 +1,93 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# VPV Starter Toolkit in Laravel + Vue 3 (Composition API)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Welcome to the Vue PDF Viewer (VPV) starter toolkit! This repository provides a comprehensive guide on how to use VPV with Vue 3 in Laravel project via the Composition API. This repo showcases how VPV can be integrated and rendered as part of a Laravel + Vue project.
 
-## About Laravel
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Project Setup](#project-setup)
+  - [Running the Example Project](#running-the-example-project)
+- [Examples](#examples)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Installation
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+To get started, please clone this repo to your local machine and install the dependencies:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```bash
+git clone https://github.com/your-username/starter-vpv-laravel.git
+cd starter-vpv-laravel
+composer install
 
-## Learning Laravel
+npm install
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Usage
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Project Setup
 
-## Laravel Sponsors
+1. **Clone the Repository**: If you haven't already, clone the repository and navigate into the project directory.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+    ```bash
+    git clone https://github.com/your-username/starter-vpv-laravel.git
+    cd starter-vpv-laravel
+    ```
 
-### Premium Partners
+2. **Install Dependencies**: Install the necessary dependencies using npm
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+    ```bash
+    npm install
+    ```
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Running the Example Project
 
-## Code of Conduct
+This repo includes an example project to demonstrate how to use VPV. To run the example project:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. **Serve the Application**: Use the following command to start the development server
 
-## Security Vulnerabilities
+    ```bash
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    npm run serve
+    # Open another terminal
+    php artisan serve
+    ```
 
-## License
+2. **Open in Browser**: Open your browser and navigate to `http://localhost:8000` (or the port specified in your terminal) to see the example project in action
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Using the VPV Component
+
+Once the example project is running, you may explore the source code to see how the VPV component is integrated. Here is a brief overview:
+
+1. **Import the component**: Import the desired VPV component into your Vue file
+
+    ```js
+    <script setup>
+      import { VPdfViewer } from '@vue-pdf-viewer/viewer';
+    </script>
+    ```
+
+2. **Use the component in the template**: Add the VPV component to your template section
+
+    ```html
+    <template>
+      <div :style="{ width: '1028px', height: '700px'}">
+        <VPdfViewer src="https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf" />
+      </div>
+    </template>
+    ```
+
+## Examples
+
+For more examples, please refer to the `/resources/js/Components/PdfViewers.vue` file in this repository:
+ - Default Toolbar
+ - Without Toolbar
+ - Mobile View
+
+_Remark: If you would like more examples, feel free to open an issue._
+
+For more configurations, please check the [documentation](https://docs-vue-pdf-viewer.logicspark.com) site.
+
+---
+
+Thank you for using VPV! We hope this toolkit helps you build amazing Vue 3 applications. If you have any questions or need further assistance on this example, please feel free to open an issue. Happy coding!
