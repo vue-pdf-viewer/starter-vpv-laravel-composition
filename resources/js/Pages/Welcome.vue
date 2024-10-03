@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Head, Link } from '@inertiajs/vue3';
+import PdfViewers from '@/Components/PdfViewers.vue';
 
 defineProps<{
     canLogin?: boolean;
@@ -73,6 +74,8 @@ function handleImageError() {
                 </header>
 
                 <main class="mt-6">
+                    <PdfViewers />
+                    <br>
                     <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
                         <a
                             href="https://laravel.com/docs"
