@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import { VPdfViewer } from '@vue-pdf-viewer/viewer';
+import { VPdfViewer, useLicense } from '@vue-pdf-viewer/viewer';
+import { onBeforeMount } from 'vue';
 
 const toolbarOptions = false;
 const pdfSrc =
     'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf';
+
+onBeforeMount(() => {
+    useLicense('YOUR_LICENSE_KEY');
+});
 </script>
 
 <template>
@@ -18,7 +23,7 @@ const pdfSrc =
     <h2>Mobile</h2>
     <div class="pdf-viewer-wrapper-mobile">
         <VPdfViewer :src="pdfSrc" />
-</div>
+    </div>
 </template>
 <style scoped>
 h2 {
