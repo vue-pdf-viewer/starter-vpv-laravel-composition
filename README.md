@@ -86,7 +86,7 @@ For more examples, please refer to the `/resources/js/Components/PdfViewers.vue`
 
 _Remark: If you would like more examples, feel free to open an issue._
 
-For more configurations, please check the [documentation](https://docs-vue-pdf-viewer.logicspark.com) site.
+For more configurations, please check the [documentation](https://docs.vue-pdf-viewer.dev) site.
 
 ---
 
