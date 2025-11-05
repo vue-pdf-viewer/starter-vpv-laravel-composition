@@ -3,11 +3,12 @@
 Welcome to the Vue PDF Viewer (VPV) starter toolkit! This repository provides a comprehensive guide on how to use VPV with Vue 3 in Laravel project via the Composition API. This repo showcases how VPV can be integrated and rendered as part of a Laravel + Vue project.
 
 ## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Project Setup](#project-setup)
-  - [Running the Example Project](#running-the-example-project)
-- [Examples](#examples)
+
+-   [Installation](#installation)
+-   [Usage](#usage)
+    -   [Project Setup](#project-setup)
+    -   [Running the Example Project](#running-the-example-project)
+-   [Examples](#examples)
 
 ## Installation
 
@@ -39,7 +40,6 @@ npm install
     npm install
     ```
 
-
 ### Running the Example Project
 
 This repo includes an example project to demonstrate how to use VPV. To run the example project:
@@ -48,7 +48,7 @@ This repo includes an example project to demonstrate how to use VPV. To run the 
 
     ```bash
 
-    npm run serve
+    npm run dev
     # Open another terminal
     php artisan serve
     ```
@@ -62,27 +62,28 @@ Once the example project is running, you may explore the source code to see how 
 1. **Import the component**: Import the desired VPV component into your Vue file
 
     ```js
-    <script setup>
-      import { VPdfViewer } from '@vue-pdf-viewer/viewer';
-    </script>
+    <script setup>import {VPdfViewer} from '@vue-pdf-viewer/viewer';</script>
     ```
 
 2. **Use the component in the template**: Add the VPV component to your template section
 
     ```html
     <template>
-      <div :style="{ width: '1028px', height: '700px'}">
-        <VPdfViewer src="https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf" />
-      </div>
+        <div :style="{ width: '1028px', height: '700px'}">
+            <VPdfViewer
+                src="https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf"
+            />
+        </div>
     </template>
     ```
 
 ## Examples
 
 For more examples, please refer to the `/resources/js/Components/PdfViewers.vue` file in this repository:
- - Default Toolbar
- - Without Toolbar
- - Mobile View
+
+-   Default Toolbar
+-   Without Toolbar
+-   Mobile View
 
 _Remark: If you would like more examples, feel free to open an issue._
 
