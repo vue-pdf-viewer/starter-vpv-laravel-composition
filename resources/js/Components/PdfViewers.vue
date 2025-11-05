@@ -6,9 +6,14 @@ const toolbarOptions = false;
 const pdfSrc =
     'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf';
 
-onBeforeMount(() => {
-    useLicense('YOUR_LICENSE_KEY');
-});
+// `useLicense` is recommended to be used in the app.ts file
+// this is just an example of using the license in component which is not recommended
+// because it will be loaded on every component mount
+// onBeforeMount(() => {
+//     useLicense(
+//         'YOUR_LICENSE_TOKEN',
+//     );
+// });
 </script>
 
 <template>
