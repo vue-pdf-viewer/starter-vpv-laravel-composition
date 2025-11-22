@@ -1,6 +1,6 @@
-# VPV Starter Toolkit in Laravel + Vue 3 (Composition API)
+# VPV Starter Toolkit in Laravel and Vue 3 (Composition API)
 
-Welcome to the Vue PDF Viewer (VPV) starter toolkit! This repository provides a comprehensive guide on how to use VPV with Vue 3 in Laravel project via the Composition API. This repo showcases how VPV can be integrated and rendered as part of a Laravel + Vue project.
+Welcome to the Vue PDF Viewer (VPV) starter toolkit! This repository provides a comprehensive guide on how to use VPV with Vue 3 in Laravel project via the Composition API. This repo showcases how VPV can be integrated and rendered as part of a Laravel and Vue project.
 
 ## Table of Contents
 
