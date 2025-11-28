@@ -44,7 +44,22 @@ npm install
 
 This repo includes an example project to demonstrate how to use VPV. To run the example project:
 
-1. **Serve the Application**: Use the following command to start the development server
+1. **Prepare Laravel**: Ensure Laravel is properly configured before running the application
+
+    - Ensure there is an `APP_KEY` by running:
+
+    ```bash
+    php artisan key:generate
+    ```
+
+    - Ensure the database exists by creating a `database.sqlite` file in the `database/` folder, then run migrations:
+
+    ```bash
+    touch database/database.sqlite
+    php artisan migrate
+    ```
+
+2. **Serve the Application**: Use the following command to start the development server
 
     ```bash
 
@@ -53,7 +68,7 @@ This repo includes an example project to demonstrate how to use VPV. To run the 
     php artisan serve
     ```
 
-2. **Open in Browser**: Open your browser and navigate to `http://localhost:8000` (or the port specified in your terminal) to see the example project in action
+3. **Open in Browser**: Open your browser and navigate to `http://localhost:8000` (or the port specified in your terminal) to see the example project in action
 
 ### Using the VPV Component
 
