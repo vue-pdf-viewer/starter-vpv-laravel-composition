@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { VPdfViewer, useLicense } from '@vue-pdf-viewer/viewer';
 import { onBeforeMount } from 'vue';
+import AppPdfViewer from '@/Components/AppPdfViewer.vue';
 
 const toolbarOptions = false;
 const pdfSrc =
@@ -29,6 +30,8 @@ const pdfSrc =
     <div class="pdf-viewer-wrapper-mobile">
         <VPdfViewer :src="pdfSrc" />
     </div>
+
+    <AppPdfViewer :src="pdfSrc" title="Default Toolbar with Annotation" annotate-enabled />
 </template>
 <style scoped>
 h2 {

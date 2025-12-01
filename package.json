@@ -7,6 +7,7 @@
         "lint": "eslint resources/js --ext .js,.ts,.vue --ignore-path .gitignore --fix"
     },
     "dependencies": {
+        "@vue-pdf-viewer/annotation": "latest",
         "@vue-pdf-viewer/viewer": "latest"
     },
     "devDependencies": {
