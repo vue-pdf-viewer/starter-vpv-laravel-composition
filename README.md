@@ -92,6 +92,32 @@ Once the example project is running, you may explore the source code to see how 
     </template>
     ```
 
+### Using the Vue PDF Viewer Component with Annotation
+
+In this starter, we provide `resources/js/components/AppPdfViewer.vue` as an example of how to use the annotation features within the viewer. Here’s a brief overview:
+
+1. **Import the component and plugin**: Import the Vue PDF Viewer component along with the annotation plugin into your Vue file.
+
+   ```vue
+   <script setup lang="ts">
+    import { VPdfViewer } from '@vue-pdf-viewer/viewer'
+    import VPdfAnnotation from "@vue-pdf-viewer/annotation"
+   </script>
+   ```
+
+2. **Use the component with the plugin in your template**: Add the Vue PDF Viewer component to the template and pass the annotation plugin through the `plugins` prop.
+
+   ```html
+   <template>
+      <div :style="{ width: '1028px', height: '700px'}">
+        <VPdfViewer
+          src="https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf"
+          :plugins="[VPdfAnnotation()]"
+        />
+      </div>
+   </template>
+   ```
+
 ## Examples
 
 For more examples, please refer to the `/resources/js/Components/PdfViewers.vue` file in this repository:
