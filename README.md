@@ -125,6 +125,7 @@ For more examples, please refer to the `/resources/js/Components/PdfViewers.vue`
 -   Default Toolbar
 -   Without Toolbar
 -   Mobile View
+-   Default Toolbar with Annotation
 
 _Remark: If you would like more examples, feel free to open an issue._
 
